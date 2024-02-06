@@ -4,6 +4,6 @@ namespace FPTWeatherForecastApp.WeatherForecast.Application.Interfaces
 {
     public interface IWeatherService
     {
-        Task<WeatherDataDTO> GetWeatherDataAsync(string zipcode);
+        Task<WeatherDataDTO> GetWeatherDataAsync(string location);
     }
 }

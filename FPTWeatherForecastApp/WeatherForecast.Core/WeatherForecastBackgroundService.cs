@@ -24,9 +24,9 @@ namespace FPTWeatherForecastApp.WeatherForecast.Core
             while (!stoppingToken.IsCancellationRequested)
             {
                 Console.WriteLine("\n\nEnter the location (Example: M4V 2B6 or Toronto)");
-                string zipcode = Console.ReadLine();
+                string location = Console.ReadLine();
 
-                WeatherDataDTO weatherData = await _weatherService.GetWeatherDataAsync(zipcode);
+                WeatherDataDTO weatherData = await _weatherService.GetWeatherDataAsync(location);
                 DisplayWeatherInformation(weatherData);
             }
         }

@@ -12,10 +12,10 @@ namespace FPTWeatherForecastApp.WeatherForecast.Application.Implementation
             _configuration = configuration;
         }
 
-        public async Task<WeatherDataDTO> GetWeatherDataAsync(string zipcode)
+        public async Task<WeatherDataDTO> GetWeatherDataAsync(string location)
         {
             string apiKey = _configuration["WeatherstackApiKey"];
-            string apiUrl = $"http://api.weatherstack.com/current?access_key={apiKey}&query={zipcode}";
+            string apiUrl = $"http://api.weatherstack.com/current?access_key={apiKey}&query={location}";
 
             using (HttpClient client = new HttpClient())
             {
